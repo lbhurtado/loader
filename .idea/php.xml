@@ -93,6 +93,21 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/vendor/nexmo/client" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/joselfonseca/laravel-tactician" />
+      <path value="$PROJECT_DIR$/vendor/thecodingmachine/safe" />
+      <path value="$PROJECT_DIR$/vendor/eloquent/enumeration" />
+      <path value="$PROJECT_DIR$/vendor/spomky-labs/otphp" />
+      <path value="$PROJECT_DIR$/vendor/prettus/l5-repository" />
+      <path value="$PROJECT_DIR$/vendor/beberlei/assert" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-schemaless-attributes" />
+      <path value="$PROJECT_DIR$/vendor/prettus/laravel-validation" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/vendor/league/tactician" />
+      <path value="$PROJECT_DIR$/vendor/opis/routing" />
+      <path value="$PROJECT_DIR$/vendor/opis/events" />
+      <path value="$PROJECT_DIR$/vendor/lbhurtado/tactician" />
+      <path value="$PROJECT_DIR$/vendor/opis/pattern" />
+      <path value="$PROJECT_DIR$/vendor/lbhurtado/missive" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
