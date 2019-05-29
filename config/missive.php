@@ -52,4 +52,19 @@ return [
             ],
         ],
     ],
+    'relay' => [
+        'default' => env('MISSIVE_RELAY', 'local'),
+        'providers' => [
+            'local' => [
+                'from' => 'from',
+                'to' => 'to',
+                'message' => 'message',
+            ],
+            'telerivet' => [
+                'from' => 'from_number',
+                'to' => 'to_number',
+                'message' => 'content',
+            ],
+        ],
+    ],
 ];
