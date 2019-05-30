@@ -108,6 +108,9 @@
       <path value="$PROJECT_DIR$/vendor/lbhurtado/tactician" />
       <path value="$PROJECT_DIR$/vendor/opis/pattern" />
       <path value="$PROJECT_DIR$/vendor/lbhurtado/missive" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/lbhurtado/common" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

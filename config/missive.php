@@ -35,19 +35,19 @@ return [
                 'relay' => [
                     \LBHurtado\Missive\Validators\CreateSMSValidator::class,
                     \LBHurtado\Missive\Responders\CreateSMSResponder::class,
-//                \LBHurtado\Missive\Actions\Middleware\ChargeSMSMiddleware::class,
+                \LBHurtado\Missive\Actions\Middleware\ChargeSMSMiddleware::class,
                 ],
                 'verify' => [
                     \LBHurtado\Missive\Validators\CreateSMSValidator::class,
                     \LBHurtado\Missive\Responders\CreateSMSResponder::class,
                     \LBHurtado\Missive\Actions\Middleware\VerifyContactHandler::class,
-//                    \LBHurtado\Missive\Actions\Middleware\ChargeSMSMiddleware::class,
+                    \LBHurtado\Missive\Actions\Middleware\ChargeSMSMiddleware::class,
                 ],
                 'topup' => [
                     \LBHurtado\Missive\Validators\CreateSMSValidator::class,
                     \LBHurtado\Missive\Responders\CreateSMSResponder::class,
                     \LBHurtado\Missive\Actions\Middleware\TopupMobileHandler::class,
-//                    \LBHurtado\Missive\Actions\Middleware\ChargeSMSMiddleware::class,
+                    \LBHurtado\Missive\Actions\Middleware\ChargeSMSMiddleware::class,
                 ],
             ],
         ],
