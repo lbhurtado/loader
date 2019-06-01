@@ -2,6 +2,7 @@
 
 use LBHurtado\SMS\Facades\SMS;
 use LBHurtado\Missive\Actions\TopupMobileAction;
+use App\CommandBus\{PingAction, SendAction};
 
 $router = resolve('missive:router');
 
@@ -10,15 +11,20 @@ $router->register('LOG {message}', function (string $path, array $values) {
 });
 
 $router->register('PING', function (string $path, array $values) use ($router) {
-    tap($router->missive->getSMS()->origin, function ($contact) use ($values) {
-        SMS::from('TXTCMDR')->to($contact->mobile)->content('PONG')->send();
-    });
+    $mobile = $router->missive->getSMS()->origin->mobile;
+    (new PingAction)
+        ->sendReply(compact('mobile'))
+    ;
 });
 
 $router->register('SEND {country=(\+?63|0)}{mobile=[0-9]{10}} {message=.*}', function (string $path, array $values) use ($router) {
     tap($router->missive->getSMS()->origin, function ($contact) use ($values) {
         $mobile = "+63".$values['mobile'];
-        SMS::from('TXTCMDR')->to($mobile)->content($values['message'])->send();
+        $message = $values['message'];
+        (new SendAction)
+            ->createContact(compact('mobile'))
+            ->sendMessage(compact('mobile', 'message'))
+        ;
     });
 });
 
