@@ -2,10 +2,6 @@
 
 namespace App\CommandBus\Commands;
 
-/**
- * Class PingCommand
- * @package App\CommandBus\Commands
- */
 class PingCommand
 {
 	/** @var string */

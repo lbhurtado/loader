@@ -2,9 +2,9 @@
 
 namespace App\CommandBus;
 
-use Joselfonseca\LaravelTactician\CommandBusInterface;
 use App\CommandBus\Commands\PingCommand;
 use App\CommandBus\Handlers\PingHandler;
+use Joselfonseca\LaravelTactician\CommandBusInterface;
 
 class PingAction
 {
