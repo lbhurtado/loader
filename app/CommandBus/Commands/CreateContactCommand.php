@@ -14,6 +14,6 @@ class CreateContactCommand
      */
     public function __construct(string $mobile)
     {
-    	$this->mobile = $mobile;
+    	$this->mobile = phone($mobile, 'PH')->formatE164();
     }
 }

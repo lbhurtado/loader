@@ -11,7 +11,11 @@ $router->register('LOG {message}', function (string $path, array $values) {
 });
 
 $router->register('PING', function (string $path, array $values) use ($router) {
+
     $mobile = $router->missive->getSMS()->origin->mobile;
+    $mobile = phone($mobile, 'PH')->formatE164();
+
+    \Log::info($mobile);
     (new PingAction)
         ->sendReply(compact('mobile'))
     ;

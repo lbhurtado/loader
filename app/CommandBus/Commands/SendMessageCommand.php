@@ -15,7 +15,7 @@ class SendMessageCommand
      */
     public function __construct(string $mobile, string $message)
     {
-    	$this->mobile = $mobile;
+    	$this->mobile = phone($mobile, 'PH')->formatE164();
     	$this->message = $message;
     }	
 }
