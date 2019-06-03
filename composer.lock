@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a85d5dfcb018ec35082465adc3feb61",
+    "content-hash": "4baefe8c14612e22d28f404bbe3a442c",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -1257,16 +1257,16 @@
         },
         {
             "name": "lbhurtado/missive",
-            "version": "1.6.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lbhurtado/missive.git",
-                "reference": "2a01f9c95c86c6a776af9ec3b8cc42843da7636c"
+                "reference": "71adf03f556e52e74beb913a795de05a410c919c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lbhurtado/missive/zipball/2a01f9c95c86c6a776af9ec3b8cc42843da7636c",
-                "reference": "2a01f9c95c86c6a776af9ec3b8cc42843da7636c",
+                "url": "https://api.github.com/repos/lbhurtado/missive/zipball/71adf03f556e52e74beb913a795de05a410c919c",
+                "reference": "71adf03f556e52e74beb913a795de05a410c919c",
                 "shasum": ""
             },
             "require": {
@@ -1321,7 +1321,7 @@
                 "missive",
                 "sms"
             ],
-            "time": "2019-06-02T13:19:38+00:00"
+            "time": "2019-06-03T08:39:57+00:00"
         },
         {
             "name": "lbhurtado/sms",
@@ -6552,7 +6552,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "lbhurtado/missive": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

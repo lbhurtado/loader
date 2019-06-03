@@ -6,18 +6,9 @@ use App\CommandBus\{PingAction, SendAction, LogAction};
 
 $router = resolve('missive:router');
 
-$router->register('LOG {message}', function (string $path, array $values) use ($router) {
-    (new LogAction)
-        ->logSMS(['sms' => $router->missive->getSMS()]);
-});
+$router->register('LOG {message}', new LogAction($router));
 
-$router->register('PING', function (string $path, array $values) use ($router) {
-    $mobile = $router->missive->getSMS()->origin->mobile;
-
-    (new PingAction)
-        ->sendReply(compact('mobile'))
-    ;
-});
+$router->register('PING', new PingAction($router));
 
 $router->register('SEND {country=(\+?63|0)}{mobile=[0-9]{10}} {message=.*}', function (string $path, array $values) use ($router) {
     tap($router->missive->getSMS()->origin, function ($contact) use ($values) {
